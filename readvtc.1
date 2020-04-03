@@ -1,0 +1,20 @@
+.Dd $Mdocdate$
+.Dt READVTC 1
+.Os
+.Sh NAME
+.Nm readvtc
+.Nd read virtual terminal color
+.Sh SYNOPSIS
+.Nm
+.Op Ar number
+.Sh DESCRIPTION
+.Nm
+reads values from /sys/module/vt/parameters/default_<color> and prints the
+hex representations to STDOUT. A numeric value from 0 to 15 can be passed to the
+program to retrieve a specific color.
+.Sh OPTIONS
+.Bl -tag -width Ds
+.It Ar number
+Specifies a numeric index from 0 to 15, one of the 16 colors of the virtual
+terminal.
+.El
